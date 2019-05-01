@@ -39,6 +39,7 @@ public class FileUtils {
 	public static void gen(ClassModel classModel, String templateName,String targetFolder) {
 		Configuration configuration = new Configuration();
 		configuration.setObjectWrapper(new DefaultObjectWrapper());
+		//设置ftl模版目录
 		configuration.setTemplateLoader(new ClassTemplateLoader(ControllerGenerator.class, "/com/hit/codeGen/template"));
 		try {
 			Template template = configuration.getTemplate(templateName);

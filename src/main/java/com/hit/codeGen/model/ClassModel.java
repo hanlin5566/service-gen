@@ -1,10 +1,7 @@
 package com.hit.codeGen.model;
 
-import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.apache.poi.ss.formula.functions.T;
 
 import com.hit.codeGen.util.StringUtil;
 
@@ -400,21 +397,21 @@ public class ClassModel {
 			classModel.setModelPackage(classPackage);
 			break;
 		case WEB_CONTEXT:
-			@SuppressWarnings("unchecked")
-			//返回webContext的泛型
-			Class<T> loginSessionClass = (Class<T>) ((ParameterizedType) clazz.getGenericSuperclass()).getActualTypeArguments()[0]; 
-			classModel.setContextFullName(classFullName);
-			classModel.setContextName(className);
-			//添加loginsession信息
-			ClassModel.addImportClass(loginSessionClass.getName(), classModel.getImportClass());
-			classModel.setLoginSessionFullName(loginSessionClass.getName());
-			classModel.setLoginSessionName(loginSessionClass.getSimpleName());
-			//添加loginsession返回的用户类
-			Class<?> getUserRetClazz = loginSessionClass.getMethod("getUserInfo").getReturnType();
-			ClassModel.addImportClass(getUserRetClazz.getName(), classModel.getImportClass());
-			classModel.setRetUserTypeFullName(getUserRetClazz.getName());
-			classModel.setRetUserTypeName(getUserRetClazz.getSimpleName());
-			classModel.setRetUserTypeNameLowercase(StringUtil.firstCharToLowerCase(getUserRetClazz.getSimpleName()));
+//			@SuppressWarnings("unchecked")
+//			//返回webContext的泛型
+//			Class<T> loginSessionClass = (Class<T>) ((ParameterizedType) clazz.getGenericSuperclass()).getActualTypeArguments()[0]; 
+//			classModel.setContextFullName(classFullName);
+//			classModel.setContextName(className);
+//			//添加loginsession信息
+//			ClassModel.addImportClass(loginSessionClass.getName(), classModel.getImportClass());
+//			classModel.setLoginSessionFullName(loginSessionClass.getName());
+//			classModel.setLoginSessionName(loginSessionClass.getSimpleName());
+//			//添加loginsession返回的用户类
+//			Class<?> getUserRetClazz = loginSessionClass.getMethod("getUserInfo").getReturnType();
+//			ClassModel.addImportClass(getUserRetClazz.getName(), classModel.getImportClass());
+//			classModel.setRetUserTypeFullName(getUserRetClazz.getName());
+//			classModel.setRetUserTypeName(getUserRetClazz.getSimpleName());
+//			classModel.setRetUserTypeNameLowercase(StringUtil.firstCharToLowerCase(getUserRetClazz.getSimpleName()));
 			break;
 		default:
 			break;

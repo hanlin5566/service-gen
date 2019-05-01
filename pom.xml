@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.hit</groupId>
+  <groupId>com.hanson</groupId>
   <artifactId>service-gen</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
@@ -23,30 +23,16 @@
     </dependency>
     
     <dependency>
+      	<groupId>com.hanson</groupId>
+		<artifactId>transform</artifactId>
+		<version>1.0</version>
+    </dependency>
+    
+    <dependency>
       <groupId>freemarker</groupId>
       <artifactId>freemarker</artifactId>
       <version>2.3.8</version>
   	</dependency>
   	
-  	<dependency>
-		<groupId>com.hit</groupId>
-		<artifactId>school-service</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</dependency>
-	
-	<dependency>
-		<groupId>com.hit</groupId>
-		<artifactId>common-service</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</dependency>
-	
-	<!-- controller -->
-	<dependency>
-		<groupId>com.hit</groupId>
-		<artifactId>edu-operations-if-web</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</dependency>
-	
-	
   </dependencies>
 </project>

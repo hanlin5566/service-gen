@@ -10,7 +10,7 @@ import com.hit.codeGen.util.StringUtil;
 
 public class ControllerGenerator {
 	public static void main(String[] args) throws Exception {
-		Configure instance = Configure.getInstance();
+		Configure instance = Configure.getInstance("conf_simple.properties");
 		ClassModel classModel = instance.generatorClassModelAtt();
 		List<String> clearImportClass = new ArrayList<String>();
 		for (String importClass : classModel.getImportClass()) {

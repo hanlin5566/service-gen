@@ -2,8 +2,6 @@ package com.hit.codeGen.util;
 
 import java.util.Properties;
 
-import org.apache.commons.lang3.StringUtils;
-
 import com.hit.codeGen.main.ServiceCodeGenerator;
 import com.hit.codeGen.model.ClassModel;
 import com.hit.codeGen.model.ClassType;
@@ -15,10 +13,10 @@ public class Configure {
 	private String serviceFolder;
 	private String controllerFolder;
 	
-	private Configure() {
+	private Configure(String fileName) {
 		super();
 		try {
-			pros.load(ServiceCodeGenerator.class.getResourceAsStream("/conf.properties"));
+			pros.load(ServiceCodeGenerator.class.getResourceAsStream("/"+fileName));
 			this.interfaceFolder = pros.getProperty("interfaceFolder");
 			this.serviceFolder = pros.getProperty("serviceFolder");
 			this.controllerFolder = pros.getProperty("controllerFolder");
@@ -28,11 +26,11 @@ public class Configure {
 		}
 	}
 	
-	public static Configure getInstance(){
+	public static Configure getInstance(String fileName){
 		if(instance != null){
 			return instance;
 		}else{
-			return new Configure();
+			return new Configure(fileName);
 		}
 	}
 	
@@ -45,7 +43,7 @@ public class Configure {
 			ClassModel.setAtt(entity, ClassType.ENTITY, classModel);
 			String primaryKeyName = pros.getProperty("entityPrimaryId");
 			//判断是否有自定义主键
-			if(StringUtils.isNotEmpty(primaryKeyName)){
+			if(StringUtil.isNotEmpty(primaryKeyName)){
 				classModel.setPrimaryKeyName(primaryKeyName);
 				classModel.setPrimaryKeyNameLowercase(StringUtil.firstCharToLowerCase(primaryKeyName));
 			}
