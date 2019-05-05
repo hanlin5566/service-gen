@@ -23,6 +23,7 @@ public class ${entityUpper}ServiceImpl implements ${entityUpper}Service{
 	
 	@Override
 	public Integer insert(${entityUpper} ${entityLower}) {
+		${entityLower}.setDataStatus(DataStatus.NORMAL);
 		return mapper.insertSelective(${entityLower});
 	}
 	@Override
