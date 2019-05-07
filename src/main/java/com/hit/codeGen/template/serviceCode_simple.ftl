@@ -48,8 +48,8 @@ public class ${entityUpper}ServiceImpl implements ${entityUpper}Service{
 	
 	@Override
 	public List<${entityUpper}> search(${entityUpper} ${entityLower}, PageInfo page) {
+		${entityLower}.setDataStatus(DataStatus.NORMAL);
 		${entityUpper}Example example = BeanUtils.example(${entityLower},${entityUpper}Example.class);
-		example.createCriteria().andDataStatusEqualTo(DataStatus.NORMAL);
 		example.setOrderByClause("id desc");
 		List<${entityUpper}> selectByExample = mapper.selectByExampleWithRowbounds(example, page);
 		return selectByExample;

@@ -82,7 +82,7 @@ public class ${entityUpper}Controller {
 	
 	/**
 	 * 删除信息
-	 * @param ${entityLower}
+	 * @param id
 	 * @return
 	 */
 	@DeleteMapping("/{id}")
