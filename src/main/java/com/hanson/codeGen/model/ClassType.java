@@ -1,4 +1,4 @@
-package com.hit.codeGen.model;
+package com.hanson.codeGen.model;
 
 public enum ClassType {
 	ENTITY,

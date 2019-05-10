@@ -1,10 +1,10 @@
-package com.hit.codeGen.util;
+package com.hanson.codeGen.util;
 
 import java.util.Properties;
 
-import com.hit.codeGen.main.ServiceCodeGenerator;
-import com.hit.codeGen.model.ClassModel;
-import com.hit.codeGen.model.ClassType;
+import com.hanson.codeGen.main.ServiceCodeGenerator;
+import com.hanson.codeGen.model.ClassModel;
+import com.hanson.codeGen.model.ClassType;
 
 public class Configure {
 	private static Configure instance;
@@ -76,7 +76,7 @@ public class Configure {
 		}
 		// 根据entity生成mapper信息
 		try {
-			String genMapper = "gen.hit." + classModel.getPackageFor() + ".mapper." + classModel.getEntityName()
+			String genMapper = "gen.hanson." + classModel.getPackageFor() + ".mapper." + classModel.getEntityName()
 					+ "Mapper";
 			Class<?> mapper = Class.forName(genMapper);
 			ClassModel.setAtt(mapper, ClassType.MAPPER, classModel);

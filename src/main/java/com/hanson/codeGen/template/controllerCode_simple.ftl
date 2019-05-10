@@ -30,7 +30,7 @@ public class ${entityUpper}Controller {
 	@Autowired
 	${entityUpper}Service ${entityLower}Service;
 	/**
-	 * 根据ID查找用户
+	 * 根据ID查找记录
 	 * @param id
 	 * @return
 	 */

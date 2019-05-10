@@ -2,9 +2,9 @@ package ${interfacePackage};
 
 import java.util.List;
 
-import com.hit.base.result.Result;
-import com.hit.base.result.ResultPage;
-import com.hit.base.result.ResultResponse;
+import com.hanson.base.result.Result;
+import com.hanson.base.result.ResultPage;
+import com.hanson.base.result.ResultResponse;
 import ${criteriaFullName};
 import ${modelFullName};
 

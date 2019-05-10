@@ -1,8 +1,8 @@
-package com.hit.codeGen.main;
+package com.hanson.codeGen.main;
 
-import com.hit.codeGen.model.ClassModel;
-import com.hit.codeGen.util.Configure;
-import com.hit.codeGen.util.FileUtils;
+import com.hanson.codeGen.model.ClassModel;
+import com.hanson.codeGen.util.Configure;
+import com.hanson.codeGen.util.FileUtils;
 
 public class ServiceCodeGenerator {
 	public static void main(String[] args) {

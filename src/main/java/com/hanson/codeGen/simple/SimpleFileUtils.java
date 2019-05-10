@@ -1,4 +1,4 @@
-package com.hit.codeGen.simple;
+package com.hanson.codeGen.simple;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -64,7 +64,7 @@ public class SimpleFileUtils {
 	public static void gen() {
 		Configuration configuration = new Configuration();
 		configuration.setObjectWrapper(new DefaultObjectWrapper());
-		configuration.setTemplateLoader(new ClassTemplateLoader(SimpleFileUtils.class, "/com/hit/codeGen/template"));
+		configuration.setTemplateLoader(new ClassTemplateLoader(SimpleServiceCodeGenerator.class, "/com/hanson/codeGen/template"));
 		try {
 			Template template = configuration.getTemplate(SimpleConfigure.getProValue("template"));
 			StringWriter writer = new StringWriter();

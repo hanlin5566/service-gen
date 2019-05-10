@@ -1,4 +1,4 @@
-package com.hit.codeGen.simple;
+package com.hanson.codeGen.simple;
 
 import java.io.IOException;
 import java.util.Scanner;

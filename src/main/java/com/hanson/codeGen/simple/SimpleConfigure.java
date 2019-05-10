@@ -1,9 +1,9 @@
-package com.hit.codeGen.simple;
+package com.hanson.codeGen.simple;
 
 import java.util.Properties;
 
-import com.hit.codeGen.main.ServiceCodeGenerator;
-import com.hit.codeGen.util.StringUtil;
+import com.hanson.codeGen.main.ServiceCodeGenerator;
+import com.hanson.codeGen.util.StringUtil;
 
 public class SimpleConfigure {
 	private static SimpleConfigure instance;

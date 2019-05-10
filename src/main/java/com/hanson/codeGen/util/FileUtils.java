@@ -1,12 +1,12 @@
-package com.hit.codeGen.util;
+package com.hanson.codeGen.util;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.StringWriter;
 
-import com.hit.codeGen.main.ControllerGenerator;
-import com.hit.codeGen.model.ClassModel;
+import com.hanson.codeGen.main.ControllerGenerator;
+import com.hanson.codeGen.model.ClassModel;
 
 import freemarker.cache.ClassTemplateLoader;
 import freemarker.template.Configuration;
@@ -36,11 +36,11 @@ public class FileUtils {
 		return folder +"\\"+ classFullName+".java";
 	}
 	
-	public static void gen(ClassModel classModel, String templateName,String targetFolder) {
+	public static void gen(ClassModel classModel, String templateName, String targetFolder) {
 		Configuration configuration = new Configuration();
 		configuration.setObjectWrapper(new DefaultObjectWrapper());
 		//设置ftl模版目录
-		configuration.setTemplateLoader(new ClassTemplateLoader(ControllerGenerator.class, "/com/hit/codeGen/template"));
+		configuration.setTemplateLoader(new ClassTemplateLoader(ControllerGenerator.class, "/com/hanson/codeGen/template"));
 		try {
 			Template template = configuration.getTemplate(templateName);
 			StringWriter writer = new StringWriter();

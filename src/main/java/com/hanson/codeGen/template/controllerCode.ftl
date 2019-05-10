@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.hit.base.result.Result;
-import com.hit.base.result.ResultPage;
-import com.hit.base.result.ResultResponse;
+import com.hanson.base.result.Result;
+import com.hanson.base.result.ResultPage;
+import com.hanson.base.result.ResultResponse;
 
 <#list importClass as clazz>
 import ${clazz};

@@ -1,4 +1,4 @@
-package com.hit.codeGen.util;
+package com.hanson.codeGen.util;
 
 import java.io.File;
 import java.lang.reflect.Method;
@@ -12,11 +12,12 @@ import java.util.jar.JarFile;
 
 /**
  *  * 类相关的工具类  *  
+ *
  */
 public class FindClassMethod {
 	public static void main(String[] args) {
 		FindClassMethod find = new FindClassMethod();
-		String packageName = "com.hit.school.service.impl";
+		String packageName = "com.hanson.school.service.impl";
 		// List<String> classNames = getClassName(packageName);
 		List<String> classNames = find.getClassName(packageName, false);
 		if (classNames != null) {
@@ -49,7 +50,12 @@ public class FindClassMethod {
 		normalList.add(String.format("count%sByCondition", className));
 		return normalList;
 	}
-	
+
+	/**
+	 * 方法检测类
+	 * @param className
+	 * @throws Exception
+	 */
 	private void checkService(String className) throws Exception{
 		String serviceName = this.getServiceName(className);
 		List<String> normalList = this.getnormalList(serviceName);

@@ -1,9 +1,9 @@
-package com.hit.codeGen.model;
+package com.hanson.codeGen.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.hit.codeGen.util.StringUtil;
+import com.hanson.codeGen.util.StringUtil;
 
 public class ClassModel {
 	private String primaryKeyName;//首字母大写
@@ -339,7 +339,7 @@ public class ClassModel {
 			classModel.setEntityPackage(classPackage);
 			classModel.setEntityNameLowercase(StringUtil.firstCharToLowerCase(className));
 			// 根据entity设置所属包
-			int projectPackageLenth = "gen.hit.".length();
+			int projectPackageLenth = "gen.hanson.".length();
 			String packageFor = classFullName.substring(projectPackageLenth, classFullName.length());
 			packageFor = packageFor.substring(0, packageFor.indexOf("."));
 			classModel.setPackageFor(packageFor);
@@ -357,7 +357,7 @@ public class ClassModel {
 			break;
 		case SERVICE_INTERFACE:
 			String interfaceName = classModel.getModuleName() + "Service";
-			String interfacepackageName = "com.hit." + classModel.getPackageFor() + ".service";
+			String interfacepackageName = "com.hanson." + classModel.getPackageFor() + ".service";
 			classModel.setInterfaceName(interfaceName);
 			classModel.setInterfaceFullName(interfacepackageName + "." + interfaceName);
 			classModel.setInterfacePackage(interfacepackageName);
@@ -367,7 +367,7 @@ public class ClassModel {
 			break;
 		case SERVICE:
 			String serviceName = classModel.getInterfaceName() + "Impl";
-			String servicePackageName = "com.hit." + classModel.getPackageFor() + ".service.impl";
+			String servicePackageName = "com.hanson." + classModel.getPackageFor() + ".service.impl";
 			classModel.setServiceName(serviceName);
 			classModel.setServiceFullName(servicePackageName + "." + serviceName);
 			classModel.setServicePackage(servicePackageName);
@@ -376,7 +376,7 @@ public class ClassModel {
 			break;
 		case CONTROLLER:
 			String controllerName = classModel.getModuleName() + "Controller";
-			String controllerPackageName = "com.hit." + classModel.getPackageFor() + ".controller";
+			String controllerPackageName = "com.hanson." + classModel.getPackageFor() + ".controller";
 			classModel.setControllerName(controllerName);
 			classModel.setControllerFullName(controllerPackageName + "." + controllerName);
 			classModel.setControllerPackage(controllerPackageName);

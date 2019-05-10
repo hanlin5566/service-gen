@@ -1,4 +1,4 @@
-package com.hit.codeGen.util;
+package com.hanson.codeGen.util;
 
 public class StringUtil {
 	public static String firstCharToLowerCase(String str) {

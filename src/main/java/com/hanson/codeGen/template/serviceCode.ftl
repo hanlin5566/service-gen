@@ -1,4 +1,4 @@
-package com.hit.${packageFor}.service.impl;
+package com.hanson.${packageFor}.service.impl;
 
 import java.util.List;
 
@@ -8,16 +8,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.hit.base.core.EntityHelper;
-import com.hit.base.enums.Status;
-import com.hit.base.model.PageInfo;
-import com.hit.base.result.Result;
-import com.hit.base.result.ResultPage;
-import com.hit.base.result.ResultResponse;
-import com.hit.base.result.ResultSupport;
-import com.hit.base.web.utils.BeanUtils;
-import com.hit.base.web.utils.CommonUtils;
-import com.hit.redis.common.service.UtilService;
+import com.hanson.base.core.EntityHelper;
+import com.hanson.base.enums.Status;
+import com.hanson.base.model.PageInfo;
+import com.hanson.base.result.Result;
+import com.hanson.base.result.ResultPage;
+import com.hanson.base.result.ResultResponse;
+import com.hanson.base.result.ResultSupport;
+import com.hanson.base.web.utils.BeanUtils;
+import com.hanson.base.web.utils.CommonUtils;
+import com.hanson.redis.common.service.UtilService;
 
 <#list importClass as clazz>
 import ${clazz};

@@ -1,12 +1,12 @@
-package com.hit.codeGen.main;
+package com.hanson.codeGen.main;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.hit.codeGen.model.ClassModel;
-import com.hit.codeGen.util.Configure;
-import com.hit.codeGen.util.FileUtils;
-import com.hit.codeGen.util.StringUtil;
+import com.hanson.codeGen.model.ClassModel;
+import com.hanson.codeGen.util.Configure;
+import com.hanson.codeGen.util.FileUtils;
+import com.hanson.codeGen.util.StringUtil;
 
 public class ControllerGenerator {
 	public static void main(String[] args) throws Exception {

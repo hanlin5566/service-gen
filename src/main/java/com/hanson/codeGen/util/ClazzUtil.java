@@ -1,4 +1,4 @@
-package com.hit.codeGen.util;
+package com.hanson.codeGen.util;
 
 import java.beans.BeanInfo;
 import java.beans.Introspector;
